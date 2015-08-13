@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 require 'localio/template_handler'
 require 'localio/segments_list_holder'
 require 'localio/segment'
