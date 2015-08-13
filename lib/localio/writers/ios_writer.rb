@@ -45,7 +45,7 @@ class IosWriter
   private
   
   def self.ios_parsing(term)
-    term.gsub('$s','%@')
+    term.gsub(/%(\d+)\$s/, '%\1$@').gsub('%s', '%@')
   end
 
   def self.ios_key_formatter(key)
