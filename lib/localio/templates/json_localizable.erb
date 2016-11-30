@@ -2,13 +2,8 @@
 <%   @segments.each do |term|
          term_value = term.translation
          term_key = term.key
-
-         term_key = '___comment___' if term.is_comment?
-         
-         <%
-  			if term.is_comment?
-		%>
-			<% else %>"<%= term_key %>": "<%= term_value %>"<% unless term == @segments.last %>,<%
-   		 end 
-%><%     end %>
+%><%
+  			if term.is_comment? == false
+%>	"<%= term_key %>": "<%= term_value %>"<% unless term == @segments.last %>,
+<% end %><% end  %><% end %>
 }
