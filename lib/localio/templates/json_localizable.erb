@@ -6,9 +6,9 @@
          term_key = '___comment___' if term.is_comment?
          
          <%
-  			if term.is_comment?
+  			if term.is_comment? == false
 		%>
-			<% else %>"<%= term_key %>": "<%= term_value %>"<% unless term == @segments.last %>,<%
+		"<%= term_key %>": "<%= term_value %>"<% unless term == @segments.last %>,<%
    		 end 
 %><%     end %>
 }
