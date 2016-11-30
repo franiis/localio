@@ -6,7 +6,7 @@
          <%
   			if term.is_comment? == false
 		 %>
-		"<%= term_key %>": "<%= term_value %>"<% unless term == @segments.last %>,<%
-   		 end 
-%><%     end %>
+		"<%= term_key %>": "<%= term_value %>"<% unless term == @segments.last %>,
+		<% end  %>
+<%     end %>
 }
