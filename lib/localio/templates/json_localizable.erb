@@ -1,9 +1,4 @@
 {
-    "meta" : {
-        "info": "Localizable created with localio. DO NOT MODIFY.",
-        "language": "<%= @language %>"
-    },
-    "translations": {
 <%   @segments.each do |term|
          term_value = term.translation
          term_key = term.key
@@ -11,5 +6,4 @@
          term_key = '___comment___' if term.is_comment?
 %>      "<%= term_key %>": "<%= term_value %>"<% unless term == @segments.last %>,<% end %>
 <%     end %>
-    }
 }
